@@ -13,3 +13,12 @@ else if (pr<=44 && pr>1) {
 else if (pr == 0) {
     comunicado("Oh no");
 }
+
+const Oscoy = {
+    primer_nombre: 'Alberto',
+    primer_apellido: "Gonzalez",
+    colores: {
+        color_1: "azul",
+        color_2: "verde"
+    }
+}
