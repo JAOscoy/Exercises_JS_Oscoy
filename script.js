@@ -22,3 +22,4 @@ const Oscoy = {
         color_2: "verde"
     }
 }
+
