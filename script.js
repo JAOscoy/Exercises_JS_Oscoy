@@ -42,7 +42,7 @@ const Oscoy = {
 
   Se recomienda que el nombre de la clase
   sea con "PascalCase"
-*/
+
 class Carro {
     /*
       El constructor es un método/función especial
@@ -51,14 +51,14 @@ class Carro {
   
       Por lo general en JS, se utiliza
       para definir los atributos de la clase.
-    */
+   
     constructor(velocidad, marca, modelo) {
       console.log("Ejecutando constructor...");
       this.velocidad = velocidad;
       this.marca = marca;
       this.modelo = modelo;
     }
-  }
+  } */
   
   /*
     Para crear un objeto a partir de una clase
@@ -89,13 +89,15 @@ class Carro {
      let base = 9;
      let exp = 3; */
 
-     let variable;
-
 function exponente(base, exp){
-    for(let a = 0; a < exp; a++) {
+    let variable;
+    let a = 0
+    while(a < exp) {
         let resultado = (a === 0) ? base : variable;
         variable = resultado * base;
-        console.log(Number(resultado));
+        a++;
+        console.log(resultado);
     }
+    console.log("Fin")
 }
 
