@@ -75,11 +75,8 @@ class Carro {
   
   console.log('bmw', bmw);
   console.log('vo')
-  */
-  let a = 0;
-  let base = 9;
-  let exponente = 3;
-  let variable;
+
+ 
   
   do {
           let resultado = (a==0) ? base: variable;
@@ -87,3 +84,18 @@ class Carro {
           variable = resultado * base;
           console.log(resultado);
       } while (a < exponente);
+
+     
+     let base = 9;
+     let exp = 3; */
+
+     let variable;
+
+function exponente(base, exp){
+    for(let a = 0; a < exp; a++) {
+        let resultado = (a === 0) ? base : variable;
+        variable = resultado * base;
+        console.log(Number(resultado));
+    }
+}
+
