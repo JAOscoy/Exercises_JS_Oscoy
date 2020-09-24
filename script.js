@@ -1,7 +1,7 @@
 function comunicado(valor) {
     document.getElementById('Mensajito').textContent = valor;
 }
-
+/* 
 let pr = 0;
 
 if (pr>44) {
@@ -13,6 +13,19 @@ else if (pr<=44 && pr>1) {
 else if (pr == 0) {
     comunicado("Oh no");
 }
+
+
+let chop = 6
+
+let chap = 5
+
+let porron = (chap > chop) ? comunicado('Oh si'):comunicado('Oh no');
+
+for(let x = 0; x <= 10; x++){
+    console.log(x + 10);
+}
+
+
 
 const Oscoy = {
     primer_nombre: 'Alberto',
@@ -53,7 +66,7 @@ class Carro {
   
     A los objetos creados con el operador new se les llama
     "instancias" de la clase.
-  */
+
   const bmw = new Carro();
   const volkswagen = new Carro();
   let chevrolet = new Carro();
@@ -62,5 +75,15 @@ class Carro {
   
   console.log('bmw', bmw);
   console.log('vo')
-
+  */
+  let a = 0;
+  let base = 9;
+  let exponente = 3;
+  let variable;
   
+  do {
+          let resultado = (a==0) ? base: variable;
+          a++;
+          variable = resultado * base;
+          console.log(resultado);
+      } while (a < exponente);
