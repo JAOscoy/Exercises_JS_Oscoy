@@ -87,7 +87,7 @@ class Carro {
 
      
      let base = 9;
-     let exp = 3; */
+     let exp = 3; 
 
 function exponente(base, exp){
     let variable;
@@ -100,4 +100,35 @@ function exponente(base, exp){
     }
     console.log("Fin")
 }
+
+const array = [1, 2, 3, 4];
+
+function sumar(a) {
+    const sum = 0;
+
+}
+function factorial(n) {
+    let fd;
+        for(let i = n-1; i === 1; i--) {
+            fd = n * i
+            console.log(fd)
+        }
+    }
+*/
+function fortuna() {
+  let x = 0;
+
+  return function () {
+    x++;
+    return x;
+  };
+}
+
+const f = fortuna(); // <---- Ya no debería existir x
+console.log(f());
+console.log(f());
+console.log(f());
+console.log(f());
+console.log(f());
+console.log(f());
 
