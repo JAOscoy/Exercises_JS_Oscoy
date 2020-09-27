@@ -274,9 +274,9 @@ let combinacion = function(a, b, c) {
     let array = [a, b, c];
     let valor = array.sort(function(a, b){
         return b-a;
-    });
+    })
     let cadena = valor.toString();
     cadena = cadena.replace(/,/g ,"");
     console.log("El numero mas grande posible es", cadena);
-    }
+    };
 };
