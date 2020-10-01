@@ -267,16 +267,26 @@ Vec.prototype.suma = function(vector) {
     return new Vec(this.x + vector.x, this.y + vector.y)
 }
 
-let combinacion = function(a, b, c) {
-    if (a < 0 || a > 9 || b < 0 || b > 9 || c < 0 || c > 9){
-        console.log("ERROR! El numero debe ser un digito entre 0 a 9");
+function isEmpty(text) {
+    if (text === ""){
+        return true;
     } else {
-    let array = [a, b, c];
-    let valor = array.sort(function(a, b){
-        return b-a;
-    })
-    let cadena = valor.toString();
-    cadena = cadena.replace(/,/g ,"");
-    console.log("El numero mas grande posible es", cadena);
-    };
-};
+        return false;
+    }
+}
+
+function starNumber(level) {
+    return 6 * level * (level - 1) + 1;
+ }
+
+ function largestSwap(mew){
+     if (mew >= 10 && mew <= 99 && Number.isInteger(mew) == true ) {
+         let mow = mew.toString();
+         let output = [];
+         for(let o = 0; o < 2; o++) {
+             output.push(+mow.charAt(o));
+         }
+         return output;
+        } else {
+             return "nmmms"
+         }}
