@@ -304,71 +304,56 @@ function starNumber(level) {
  }
 
  function largestSwap(mew){
-     if (mew >= 10 && mew <= 99 && Number.isInteger(mew) == true ) {
-         let mow = mew.toString();
-         const output = [];
-         for(let o = 0; o < mow.length ; o++) {
-             output.push(+mow.charAt(o));
-            };
-        let valor = output.slice().sort(function compareNumbers(a, b){
-                return b-a;
+    /*Despues de comparar si es un valor valido,
+    al argumento se le aplican los metodos para
+    convetir a string
+    crear un array por caracter
+    convertir a numero cada elemento del array */
+    if (mew >= 10 && mew <= 99 && Number.isInteger(mew) == true ) {
+       let output = mew.toString().split('').map(Number);
+        /*Crear una copia sin mutación 
+           del array original ordenado de mayor a menor*/
+       let valor = output.slice().sort(function (a, b){
+               return b-a;});
+        /*Comparaciòn de los dos arrays*/
+        if (valor > output) {
+            return false
+        } else if (output >= valor) {
+            return true
+        }  
+      /* Si no es un numero entre 10 y 99*/
+        } else {
+        return "Valor invalido. Introduzca un numero del 10 al 99";
+        }}
+
+/* V. Vocales del texto */
+
+function getVowels(anything) {
+    /*Crear string de todos los caracteres del argumento
+    Arreglo vacio y parametros*/
+        let text = anything.toString(10).split('');
+        let Vowels = [];
+        let igual = "";
+    /* empujar cada elemento del arreglo que sea vocal y que no este repetido*/
+        for(let o = 0; o < text.length ; o++){
+            if (text[o].match(/[AEIOU]/gi) && igual != text[o]){
+            Vowels.push(text[o]);
+            Vowels.sort(function(a, b){
+                return 0.5 - Math.random();
             })
-         
-         if (valor > output) {
-             return false
-         } else if (output >= valor) {
-             return true
-         }  
-       /* if (valor > output) {
-            return false;
-         else if (output >= valor) {
-        return output;
-         }*/} else {
-             return "nmmms"
-         }}
+            igual = text[o]  
+        }}
+        return Vowels;
+    }
 
-         function minMax(a) {
-            let r = {
-                "Max": Math.max(...a),
-                "Min": Math.min(...a)
-            };
-            return r;
+    function isSubset(set, subset) {
+        let exito = true;
+        for(let i = 0; i < subset.length; i++){
+            if(set.includes(subset[i]) || subset.isEmpty) {
+                exito = true
+            } else {
+                exito = false
         }
-
-        function largestSwap(mew){
-            /*Despues de comparar si es un valor valido,
-            al argumento se le aplican los metodos para
-            convetir a string
-            crear un array por caracter
-            convertir a numero cada elemento del array */
-            if (mew >= 10 && mew <= 99 && Number.isInteger(mew) == true ) {
-               let output = mew.toString().split('').map(Number);
-                /*Crear una copia sin mutación 
-                   del array original ordenado de mayor a menor*/
-               let valor = output.slice().sort(function a(a, b){
-                       return b-a;});
-                /*Comparaciòn de los dos arrays*/
-                if (valor > output) {
-                    return false
-                } else if (output >= valor) {
-                    return true
-                }  
-              /* Si no es un numero entre 10 y 99*/
-                } else {
-                return "Valor invalido. Introduzca un numero del 10 al 99";
-                }}
-            
-                function getVowels(anything) {
-                /*Crear string de todos los caracteres del argumento
-                Arreglo vacio y parametros*/
-                    let text = anything.toString(10).split('');
-                    let Vowels = [];
-                    let igual = "";
-                /* empujar cada caracter que sea vocal y que no este repetido*/
-                    for(let o = 0; o < text.length ; o++){
-                        if (text[o].match(/[AEIOU]/gi) && igual != text[o]){
-                        Vowels.push(text[o]);
-                        igual = text[o]  
-                    }}
-                    return Vowels;
-                }
+    }
+    return exito;
+}

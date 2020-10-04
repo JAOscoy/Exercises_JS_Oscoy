@@ -27,7 +27,7 @@ function minMax(a) {
     };
     return r;
 }
-/* Combinación más grande */
+/* IV. Combinación más grande */
 
 
 function largestSwap(mew){
@@ -40,7 +40,7 @@ function largestSwap(mew){
        let output = mew.toString().split('').map(Number);
         /*Crear una copia sin mutación 
            del array original ordenado de mayor a menor*/
-       let valor = output.slice().sort(function a(a, b){
+       let valor = output.slice().sort(function (a, b){
                return b-a;});
         /*Comparaciòn de los dos arrays*/
         if (valor > output) {
@@ -53,7 +53,7 @@ function largestSwap(mew){
         return "Valor invalido. Introduzca un numero del 10 al 99";
         }}
 
-/* Vocales del texto */
+/* V. Vocales del texto */
 
 function getVowels(anything) {
     /*Crear string de todos los caracteres del argumento
@@ -61,14 +61,29 @@ function getVowels(anything) {
         let text = anything.toString(10).split('');
         let Vowels = [];
         let igual = "";
-    /* empujar cada caracter que sea vocal y que no este repetido*/
+    /* empujar cada elemento del arreglo que sea vocal y que no este repetido*/
         for(let o = 0; o < text.length ; o++){
             if (text[o].match(/[AEIOU]/gi) && igual != text[o]){
             Vowels.push(text[o]);
+            Vowels.sort(function(a, b){
+                return 0.5 - Math.random();
+            })
             igual = text[o]  
         }}
         return Vowels;
     }
 
+/* VI. ¿Es un subconjunto? */
 
+function isSubset(set, subset) {
+    let exito = true;
+    for(let i = 0; i < subset.length; i++){
+        if(set.includes(subset[i]) || subset.isEmpty) {
+            exito = true
+        } else {
+            exito = false
+    }
+}
+return exito;
+}
     
