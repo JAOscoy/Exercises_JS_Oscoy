@@ -7,10 +7,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS Starter</title>
   <link rel="stylesheet" href="style.css">
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" type="text/css" href="src/styles.css" />
 </head>
 
 <body>
-<h1 id="Mensajito">Hello!</h1>
+  <div class="jumbotron">
+    <h1 class="text-center">To Do List</h1>
+    <form>
+      <div class="form-group">
+        <input id="todo-text" class="form-control" />
+      </div>
+      <button id="add-btn" type="button" class="btn btn-block btn-primary">
+        Add
+      </button>
+    </form>
+  </div>
+
+  <ul id="todo-list" class="list-group">
+    <li class="list-group-item">
+      <span class="todo-text">Nueva tarea </span>
+      <button class="btn btn-outline-danger">Eliminar</button>
+    </li>
+    <li class="list-group-item">
+      <span class="todo-text">Nueva tarea 2</span>
+      <button class="btn btn-outline-danger">Eliminar</button>
+    </li>
+  </ul>
 
 <script src="./script.js"></script>
 </body>
